@@ -1,8 +1,8 @@
 {
-    "baseUrl": "https://console-pre.raylink.live/login",
+    "baseUrl": "",
     "env": 
     {
-        "username": "18878912237",
-        "password": "Jw123456"
+        "username": "",
+        "password": ""
     }
 }

@@ -10,12 +10,12 @@ import cypress = require("cypress");
 
 describe('TestLogin', () => {
     beforeEach('After All', () => {
-        cy.visit('https://console-pre.raylink.live/login');
+        cy.visit('');
     });
 
     it.skip('Login by username and password', () => {
-        var username = '18878912237';
-        var password = 'Jw123456';
+        var username = '';
+        var password = '';
 
         cy.get('ul>li:nth-child(2)')
         .click();
@@ -37,8 +37,8 @@ describe('TestLogin', () => {
     });
 
     it('Login Test', () => {
-        var username = '18878912237';
-        var password = 'Jw123456';
+        var username = '';
+        var password = '';
 
         cy.get('ul>li')
         .should('have.length', 2)
