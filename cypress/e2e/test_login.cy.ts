@@ -6,6 +6,7 @@
  * Description: A test case about Cypress frame
  * Copyright: Copyright (©)}) 2023 Your Name. All rights reserved.
  */
+import { should } from "chai";
 import cypress = require("cypress");
 
 describe('TestLogin', () => {
@@ -44,7 +45,46 @@ describe('TestLogin', () => {
         .should('have.length', 2)
         .and(($li) => {
             // 多重断言
-            expect($li.get(0).textContent, '验证码登录')
-        })
+            expect($li.get(0).textContent, '验证码登录');
+            expect($li.get(1).textContent, "密码登录");
+        });
+
+        cy.get('ul>li:nth-child(2)')
+        .as('username_password_Btn');
+        cy.get('@username_password_Btn')
+        .click();
+
+        cy.get('input[id=agree]')
+        .click();
+        cy.get('input[id=name]')
+        .type(username);
+        cy.get('input[id=password]')
+        .type(password);
+
+        cy.get('button[type=submit]')
+        .should('have.class', 'button__StyledButton-sc-1xvpoi0-0')
+        .should('have.class', 'DNJh atom__SumbitButton-sc-1f08aeq-3')
+        .should('have.class', 'jdbddl')
+        .as('submit_Btn');
+        cy.get('@submit_Btn')
+        .click();
+    });
+
+    // it('Elements tets', () => {
+    //     before(function() {
+
+    //     });
+
+    //     // describe('#indexOf()', function() {
+    //     //     context('Can not find', function() {
+    //     //         it('Do not throw', function() {
+    //     //             (function( ) {[1, 2, 3].indexOf(4);}.should.not.throw( ))
+    //     //         })
+    //     //     })
+    //     // })
+    // });
+
+    afterEach(() => {
+        console.log('Test successfully!!!');
     });
 })
