@@ -73,7 +73,7 @@ describe('TestLogin', () => {
 
     it.skip('Test controller elements', () => {
         const username = '';
-        const password = 'Jw123456';
+        const password = '';
 
         cy.get('ul>li:nth-child(2)')
         .as('change_Btn');

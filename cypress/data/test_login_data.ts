@@ -11,11 +11,11 @@ export const testLoginUser =
     {
         summary: "Login Pass",
         username: "",
-        password: "Jw123456"
+        password: ""
     },
     {
         summary: "Login fail",
         username: "",
-        password: "Jw1234567"
+        password: ""
     }
 ]
