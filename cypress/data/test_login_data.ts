@@ -12,7 +12,6 @@ export const testLoginUser =
         summary: "Login Pass",
         username: "",
         password: "Jw123456"
-        
     },
     {
         summary: "Login fail",

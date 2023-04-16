@@ -94,7 +94,6 @@ describe('TestLogin', () => {
         .as('submit_Btn');
         cy.get('@submit_Btn')
         .click();
-        
 
         // after login
         cy.get('a')
