@@ -25,6 +25,7 @@ export default defineConfig({
       //   }
       // })
     },
+    // "baseUrl":"",
     // 测试失败重试次数
     retries: {
       "runMode": 3, // 重试cpyress run
